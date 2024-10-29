@@ -8,7 +8,7 @@ export function SectionSecondary() {
         <section className={styles.container}>
             <div className={styles.textContainer}>
                 <p className={styles.tag}>No more waste</p>
-                <h1 className={styles.title}>Pick the Sun</h1>
+                <h2 className={styles.title}>Pick the Sun</h2>
                 <p className={styles.description}>Et pulvinar nec interdum integer id urna molestie porta nullam. A, donec ornare sed turpis pulvinar purus maecenas quam a. Erat porttitor pharetra sed in mauris elementum sollicitudin.</p>
             </div>
 

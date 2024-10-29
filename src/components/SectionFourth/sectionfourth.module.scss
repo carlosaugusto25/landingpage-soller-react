@@ -3,15 +3,8 @@
     height: 66.25rem;
     padding: 5rem;
     display: flex;
-    align-items: center;
     position: relative;
-
-    .purpleBackground {
-        position: absolute;
-        top: 2rem;
-        left: 0;
-        z-index: -1;
-    }
+    gap: 10rem;
 
     .content {
         
@@ -69,5 +62,16 @@
                 }
             }
         }
+    }
+
+    .mobile {
+        margin-right: -2.575rem;
+    }
+
+    .yellowBackground {
+        position: absolute;
+        right: 0;
+        top: -3.5rem;
+        z-index: -1;
     }
 }

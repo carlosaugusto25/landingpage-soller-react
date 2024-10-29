@@ -1,11 +1,16 @@
 import styles from './button.module.scss';
 import arrowPurple from '../../assets/arrow-purple.svg';
+import arrowYellow from '../../assets/arrow.svg';
 
-export function Button() {
+interface Props {
+    yellow?: boolean
+}
+
+export function Button({yellow}:Props) {
     return(
-        <button className={styles.buttonContainer}>
+        <button className={yellow ? styles.buttonContainerYellow : styles.buttonContainerPurple }>
             <p>Request a Quote</p>
-            <img src={arrowPurple} alt="" />
+            <img src={yellow ? arrowYellow : arrowPurple} alt="" />
         </button>
     )
 }

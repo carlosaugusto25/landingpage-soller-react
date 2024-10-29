@@ -1,9 +1,12 @@
 import { Header } from "./components/Header"
+import { SectionFifth } from "./components/SectionFifth"
+import { SectionFourth } from "./components/SectionFourth"
 import { SectionHeader } from "./components/SectionHeader"
 import { SectionSecondary } from "./components/SectionSecondary"
+import { SectionSixth } from "./components/SectionSixth"
 import { SectionThird } from "./components/SectionThird"
 
-function App() {
+export function App() {
 
   return (
     <>
@@ -11,8 +14,9 @@ function App() {
       <SectionHeader />
       <SectionSecondary />
       <SectionThird />
+      <SectionFourth />
+      <SectionFifth />
+      <SectionSixth />
     </>
   )
 }
-
-export default App
