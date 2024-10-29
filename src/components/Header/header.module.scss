@@ -1,0 +1,58 @@
+.header {
+    width: 100%;
+    height: 7rem;
+    background-color: transparent;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navegation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p{
+            color: var(--gray-primary);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-right: 2.3rem;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            a {
+                text-decoration: none;
+                color: var(--gray-primary);
+                font-size: 1rem;
+                font-weight: 500;
+                padding: .75rem .5rem;
+            }
+        }
+    }
+
+    .contactAndButton {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: .5rem;
+            padding: .75rem .5rem;
+
+            p {
+                padding: 0 1rem;
+                color: var(--blue-primary);
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+    }
+    
+}
