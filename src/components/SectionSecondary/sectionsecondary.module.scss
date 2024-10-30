@@ -50,5 +50,8 @@
     .desktop {
         z-index: 2;
         
+        @media screen and (max-width: 1366px) {
+            width: 70rem;
+        }
     }
 }
