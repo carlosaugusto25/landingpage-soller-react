@@ -34,6 +34,10 @@ button {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    @media screen and (max-width: 768px) {
+        border-radius: .625rem;
+    }
 }
 
 .slick-track {
@@ -42,6 +46,15 @@ button {
     justify-content: flex-start;
     gap: 1rem;
     height: 30.625rem;
+
+    @media screen and (max-width: 1366px) {
+        gap: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        gap: 0;
+        border-radius: .625rem;
+    }
   }
 
 .slick-slide {
@@ -53,8 +66,17 @@ button {
     justify-content: center;
 
     &:hover {
-        transform: scale(1.05); // Aumenta levemente o tamanho do slide
+        transform: scale(1.05); 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    @media screen and (max-width: 1366px) {
+        width: 14rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        border-radius: .625rem;
     }
 }
 

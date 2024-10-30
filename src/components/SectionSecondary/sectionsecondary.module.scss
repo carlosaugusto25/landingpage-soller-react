@@ -3,6 +3,11 @@
     height: 80.125rem;
     position: relative;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding: 1rem;
+    }
     
     .textContainer {
         text-align: center;
@@ -11,11 +16,21 @@
         margin-right: auto;
         margin-bottom: 5rem;
 
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
         .tag {
             margin-top: 5rem;
             color: var(--orange-primary);
             font-size: 1.25rem;
             font-weight: 500;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+            }
         }
     
         .title {
@@ -23,6 +38,11 @@
             color: var(--gray-primary);
             font-weight: 800;
             margin-bottom: 1.5rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
         }
     
         .description {
@@ -30,6 +50,11 @@
             color: var(--gray-primary);
             font-weight: 400;
             line-height: 2.25rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
         }
     }
     
@@ -38,6 +63,12 @@
         left: 0;
         top: 12.5rem;
         z-index: -1;
+
+        @media screen and (max-width: 768px) {
+           width: 10rem;
+           left: -5rem;
+           top: 17rem;
+        }
     }
 
     .circlePurple {
@@ -45,6 +76,12 @@
         right: 0;
         top: 25rem;
         z-index: -1;
+
+        @media screen and (max-width: 768px) {
+            width: 10rem;
+            right: -5rem;
+            top: 23rem;
+        }
     }
 
     .desktop {
@@ -52,6 +89,10 @@
         
         @media screen and (max-width: 1366px) {
             width: 70rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
         }
     }
 }

@@ -6,30 +6,57 @@
     position: relative;
     gap: 10rem;
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 1rem;
+    }
+
     .content {
-        
+
         .contentTextTitle {
-            
+
+            @media screen and (max-width: 768px) {
+                text-align: center;
+                margin-top: 1.5rem;
+            }
+
             .tag {
                 color: var(--orange-primary);
                 font-size: 1.25rem;
                 font-weight: 500;
                 margin-bottom: .5rem;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 1rem;
+                }
             }
-            
+
             .title {
                 font-size: 3.5rem;
                 color: var(--gray-primary);
                 font-weight: 800;
                 margin-bottom: 1.5rem;
                 line-height: 3.85rem;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                }
             }
-            
+
             .description {
                 font-size: 1.25rem;
                 color: var(--gray-primary);
                 font-weight: 400;
                 line-height: 2.25rem;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 1rem;
+                    line-height: 1.3rem;
+                }
             }
         }
 
@@ -44,7 +71,11 @@
                 display: flex;
                 flex-direction: column;
                 height: 11.25rem;
-                justify-content: flex-end;
+                justify-content: center;
+
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                }
 
                 h4 {
                     font-size: 1.5rem;
@@ -52,6 +83,11 @@
                     font-weight: 700;
                     line-height: 1.65rem;
                     margin-bottom: 1rem;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 1.25rem;
+                        line-height: 1.25rem;
+                    }
                 }
 
                 span {
@@ -59,6 +95,11 @@
                     font-weight: 400;
                     color: var(--gray-primary);
                     line-height: 1.8rem;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 1rem;
+                        line-height: 1.3rem;
+                    }
                 }
             }
         }
@@ -66,6 +107,12 @@
 
     .mobile {
         margin-right: -2.575rem;
+
+        @media screen and (max-width: 768px) {
+            margin-right: 0;
+            width: 80%;
+            text-align: center;
+        }
     }
 
     .yellowBackground {
@@ -73,5 +120,13 @@
         right: 0;
         top: -3.5rem;
         z-index: -1;
+
+
+        @media screen and (max-width: 768px) {
+            right: 0;
+            top: 40rem;
+            z-index: -1;
+            width: 22.5rem;
+        }
     }
 }

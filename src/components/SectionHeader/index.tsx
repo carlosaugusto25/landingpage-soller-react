@@ -1,5 +1,6 @@
 import styles from './sectionheader.module.scss'
 import manWork from '../../assets/man-work2.svg';
+import manWorkMobile from '../../assets/man-work.svg';
 import { Button } from '../Button';
 import woman from '../../assets/woman-1.svg';
 
@@ -22,6 +23,7 @@ export function SectionHeader(){
                 </div>
             </div>
             <img className={styles.manWork} src={manWork} alt="man-work" />
+            <img className={styles.manWorkMobile} src={manWorkMobile} alt="man-work-mobile" />
         </section>
     )
 }        

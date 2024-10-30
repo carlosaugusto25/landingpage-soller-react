@@ -7,6 +7,13 @@
     align-items: center;
     position: relative;
 
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding: 1rem;
+        background-color: var(--purple-primary);
+        position: relative;
+    }
+
     .textContainer {
         margin-top: 5rem;
         align-items: flex-start;
@@ -14,11 +21,23 @@
         margin-bottom: 3rem;
         margin-left: 5rem;
 
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
         .tag {
             color: var(--yellow-primary);
             font-size: 1.25rem;
             font-weight: 500;
             margin-bottom: .5rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+            }
         }
 
         .title {
@@ -32,6 +51,31 @@
             @media screen and (max-width: 1366px) {
                 width: 30rem;
                 
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                font-size: 2rem;
+                line-height: 2rem;
+            }
+        }
+    }
+
+    .buttonContainerMobile {
+        display: none;
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .description {
+                font-size: 1.25rem;
+                color: var(--white);
+                font-weight: 400;
+                line-height: 1rem;
+                margin: 1rem 0 4rem;
             }
         }
     }
@@ -49,6 +93,10 @@
             font-weight: 400;
             line-height: 2.25rem;
         }
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
 
     .notebook {
@@ -56,7 +104,10 @@
 
         @media screen and (max-width: 1366px) {
             width: 60rem;
-            
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
         }
     }
 
@@ -64,5 +115,20 @@
         position: absolute;
         top: 0;
         right: 0;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .circlePurpleMobile {
+        display: none;
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
     }
 }

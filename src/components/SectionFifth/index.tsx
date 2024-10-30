@@ -21,35 +21,43 @@ interface DataProps {
 
 export function SectionFifth() {
 
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: width <= 768 ? 1 : (width <= 1366 ? 3 : 4),
         slidesToScroll: 1,
         arrows: false,
         initialSlide: 5
-      };
-
-    // const splideRef = useRef<typeof Splide>(null);
+    };
 
     const sliderRef = useRef<Slider>(null);
 
     const goToNext = () => {
         sliderRef.current?.slickNext();
-      };
-    
-      const goToPrev = () => {
+    };
+
+    const goToPrev = () => {
         sliderRef.current?.slickPrev();
-      };
+    };
 
     const [data, setData] = useState<DataProps[]>([]);
 
     useEffect(() => {
         setData(dataPerson)
     }, [])
-
-
 
     return (
         <section className={styles.container}>
@@ -63,24 +71,24 @@ export function SectionFifth() {
             </div>
             <div className={styles.cardContainer}>
                 <Slider ref={sliderRef} {...settings}>
-                {
-                    data.map((item, index) => {
-                        return (
-                            <div key={item.id} className={styles.card}>
-                                <p className={styles.description}>
-                                    {item.description}
-                                </p>
-                                <footer>
-                                    <img src={index % 3 === 0 ? woman1 : index % 3 === 1 ? woman2 : woman3} alt="" />
-                                    <div className={styles.author}>
-                                        <p className={styles.name}>{item.name}</p>
-                                        <p className={styles.position}>{item.position}</p>
-                                    </div>
-                                </footer>
-                            </div>
-                        )
-                    })
-                }
+                    {
+                        data.map((item, index) => {
+                            return (
+                                <div key={item.id} className={styles.card}>
+                                    <p className={styles.description}>
+                                        {item.description}
+                                    </p>
+                                    <footer>
+                                        <img src={index % 3 === 0 ? woman1 : index % 3 === 1 ? woman2 : woman3} alt="" />
+                                        <div className={styles.author}>
+                                            <p className={styles.name}>{item.name}</p>
+                                            <p className={styles.position}>{item.position}</p>
+                                        </div>
+                                    </footer>
+                                </div>
+                            )
+                        })
+                    }
                 </Slider>
             </div>
             <div className={styles.contentButtons}>
