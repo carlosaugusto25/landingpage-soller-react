@@ -7,4 +7,4 @@
 
 <h3>Project developed with React, TypeScript, Vite and styled with SASS. The system follows React componentization standards, and has responsive styling adapted for mobile devices.</h3>
 
-<h2>Link do Deploy: </h2>
+<h2>Link do Deploy: https://soller-page.netlify.app</h2>
